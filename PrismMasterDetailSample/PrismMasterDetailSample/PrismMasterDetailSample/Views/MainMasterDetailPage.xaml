@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="PrismMasterDetailSample.Views.MainMasterDetailPage">
+  <MasterDetailPage.Master>
+    <ContentPage Title="Default">
+      <ContentPage.Content>
+        <RelativeLayout>
+
+          <StackLayout VerticalOptions="FillAndExpand" BackgroundColor = "Transparent" Style="{StaticResource View_Fill_Parent_Style}">
+            <Image x:Name="bannerImage" Aspect="AspectFill" Source="ritchiebrosbanner.png" />
+            <ListView x:Name="listView" ItemsSource="{Binding MasterPageItems}"    VerticalOptions="Start" SeparatorVisibility="None"  BackgroundColor = "Transparent" >
+              <ListView.ItemTemplate >
+                <DataTemplate >
+                  <ImageCell Text="{Binding Title}" TextColor="{Binding Color}"   ImageSource="{Binding IconSource}" Command="{Binding Command}" CommandParameter="{Binding CommandParameter}" />
+                </DataTemplate>
+              </ListView.ItemTemplate>
+            </ListView>
+            <BoxView Color="Black"  VerticalOptions="Start" HeightRequest="1"></BoxView>
+            <Label Text="About" Font="22" >
+              <Label.GestureRecognizers  >
+                <TapGestureRecognizer  Command="{Binding NavigateCommand}" CommandParameter="MainNavigationPage/AboutPage"></TapGestureRecognizer>
+              </Label.GestureRecognizers>
+            </Label>
+          </StackLayout>
+        </RelativeLayout>
+      </ContentPage.Content>
+    </ContentPage>
+  </MasterDetailPage.Master>
+</MasterDetailPage>
+
+
