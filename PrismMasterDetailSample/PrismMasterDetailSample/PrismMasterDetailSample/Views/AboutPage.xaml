@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="PrismMasterDetailSample.Views.AboutPage">
+  <ContentPage.Content BackgroundColor="White">
+    <StackLayout VerticalOptions ="Start" Orientation ="Vertical"  HorizontalOptions ="Center">
+      <Label Text = "About" TextColor="Gray"/>
+      <Label Text = "App Version" TextColor="Gray"/>
+      <TableView Intent="Data" HorizontalOptions="Center"  >
+        <TableView.Root>
+          <TableRoot >
+            <TableSection Title="More Information"  >
+              <TextCell Text ="Buying with us" TextColor="Black" />
+              <TextCell Text ="Selling with us" TextColor="Black"/>
+              <TextCell Text ="Financing with us" TextColor="Black"/>
+            </TableSection>
+            <TableSection Title="Contact Support" >
+              <TextCell Text ="Email: theauction@auction.com" TextColor="Black" />
+              <TextCell Text ="USA and Canada: 1.800.211.3983" TextColor="Black"/>
+              <TextCell Text ="Europe: 31.765.242.600" TextColor="Black" />
+              <TextCell Text ="Middle East: 971.4.813.0600" TextColor="Black"/>
+            </TableSection>
+          </TableRoot>
+        </TableView.Root>
+      </TableView>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

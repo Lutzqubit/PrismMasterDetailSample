@@ -10,7 +10,7 @@
         <RelativeLayout>
 
           <StackLayout VerticalOptions="FillAndExpand" BackgroundColor = "Transparent" Style="{StaticResource View_Fill_Parent_Style}">
-            <Image x:Name="bannerImage" Aspect="AspectFill" Source="ritchiebrosbanner.png" />
+            <Image x:Name="bannerImage" Aspect="AspectFill" Source="hellomdbannerbanner.png" />
             <ListView x:Name="listView" ItemsSource="{Binding MasterPageItems}"    VerticalOptions="Start" SeparatorVisibility="None"  BackgroundColor = "Transparent" >
               <ListView.ItemTemplate >
                 <DataTemplate >
